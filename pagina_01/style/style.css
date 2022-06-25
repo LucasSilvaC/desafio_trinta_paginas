@@ -1,0 +1,158 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+:root {
+    --link_color: #000;
+    --debug: 1px solid black;
+}
+
+/*first page*/
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*conteudo de apresentação*/
+main section#content_first {
+    max-width: 40vw;
+    height: max-content;
+    padding: 0px 0px;
+    margin: auto auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 5vw;
+}
+
+/*headers*/
+main h1 {
+    font-size: 5em;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+main section#content_first section p {
+    width: 100%;
+    font-weight: lighter;
+    font-size: 0.9em;
+}
+
+/*nav*/
+nav {
+    min-width: 560px;
+    max-width: 1000px;
+    top: 30px;
+    left: 55px;
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+}
+
+nav a:hover {
+    background-color: #000;
+    color: #fff;
+    transition: .2s;
+}
+
+nav a {
+
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bolder;
+    padding: 7px 0px;
+    color: var(--link_color);
+}
+
+/*botoẽs*/
+section.botoes {
+    width: 100%;
+    display: flex;
+    margin-top: -5%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+section.botoes button {
+    padding: 20px 50px;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    font-weight: bolder;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #250637, #6E0786, #DB00FF);
+}
+
+section.botoes button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+section.botoes a {
+    display: flex;
+    align-items: center;
+    text-decoration: underline;
+    color: #000;
+}
+
+section.botoes a img {
+    width: 15px;
+    margin-left: 10px;
+}
+
+/*contents*/
+#scribble {
+    margin:0px 0px 0px -100% ;
+    width: 50px;
+    transform: rotate(25deg);
+}
+
+
+/*imagem em mascara*/
+main div#simblo_audio {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 25vh;
+    left: 51%;
+    z-index: 1;
+}
+
+main div#simblo_audio img {
+    width: 6vw;
+}
+
+main div#simblo_audio #headset_icon {
+    margin-left: 2vw;
+}
+
+main section#side_efect_image {
+    width: 55%;
+    height: 100vh;
+    background: url(../img/image_mask_crop.jpg) no-repeat center center;
+    background-size: cover;
+    clip-path: polygon(30% 0, 100% 0%, 100% 100%, 0% 100%);
+}
