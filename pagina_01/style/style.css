@@ -56,6 +56,12 @@ main section.apresentacao div.container_botoes .link_externo {
     display: flex;
     align-items: center;
 }
+
+/*conteudo do site*/
+section.container {
+    width: 100%;
+    height: 600px;
+}
 /*config img e textos*/
 main section.apresentacao h1 {
     width: 100%;
