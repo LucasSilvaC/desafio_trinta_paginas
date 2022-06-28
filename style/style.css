@@ -80,21 +80,16 @@ main section.apresentacao div.container_botoes .link_externo {
 
 /*@media main*/
 @media screen and (max-width:1000px) {
-    /*nav*/
+        /*nav*/
     nav {
-        position: absolute;
-        right: 0;
-        top: 20px;
-        left: 0;
-        margin: 0 auto;
-        width: 90%;
+        display: none;
     }
 
     nav a {
         font-size: 1.5em;
         color: #fff;
     }
-    /*main*/
+        /*main*/
     main {
         width: 100%;
         height: 100vh;
@@ -109,6 +104,24 @@ main section.apresentacao div.container_botoes .link_externo {
     main section.apresentacao {
         width: 80%;
         color: #fff;
+    }
+        /*botões horizontais*/
+    main section.apresentacao div.container_botoes {
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+    }
+    main section.apresentacao div.container_botoes a {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+    }
+
+    main section.apresentacao div.container_botoes .link_externo {
+        color: #fff;
+        margin-top: 15px;
     }
 }
 
@@ -150,4 +163,15 @@ main section.apresentacao .scribble {
 main section.apresentacao div.container_botoes img {
     width: 15px;
     margin-left: 10px;
+}
+
+/*@media for img e textos*/
+@media screen and (max-width:1000px) {
+    main section.apresentacao h1 {
+        font-size: 3.4em;
+        text-align: center;
+    }
+    main section.apresentacao .scribble {
+        display: none;
+    }
 }
