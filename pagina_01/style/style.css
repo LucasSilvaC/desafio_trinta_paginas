@@ -1,158 +1,92 @@
 * {
-    margin: 0px;
     padding: 0px;
+    margin: 0px;
     box-sizing: border-box;
 }
 
-body, html {
-    width: 100vw;
+html, body {
     height: 100vh;
-    overflow-x: hidden;
 }
 
 :root {
-    --link_color: #000;
-    --debug: 1px solid black;
+    --font-h1-h2-a: 'Montserrat Alternates', sans-serif;
+    --font-p: 'Roboto', sans-serif;
 }
 
-/*first page*/
+/*pagina principal*/
 main {
     width: 100%;
     height: 100vh;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    padding-left: 3vw;
+    background: url(../img/image_mask.png) no-repeat right fixed;
+    background-size: 50% 100%;
 }
 
-/*conteudo de apresentação*/
-main section#content_first {
-    max-width: 40vw;
-    height: max-content;
-    padding: 0px 0px;
-    margin: auto auto;
+main section.apresentacao {
+    width: 40vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 5vw;
 }
 
-/*headers*/
-main h1 {
-    font-size: 5em;
-    font-weight: bolder;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-weight: bold;
-    font-size: 1.3em;
-    margin-bottom: 10px;
-}
-
-main section#content_first section p {
-    width: 100%;
-    font-weight: lighter;
-    font-size: 0.9em;
-}
-
-/*nav*/
-nav {
-    min-width: 560px;
-    max-width: 1000px;
-    top: 30px;
-    left: 55px;
-    height: max-content;
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-}
-
-nav a:hover {
-    background-color: #000;
-    color: #fff;
-    transition: .2s;
-}
-
-nav a {
-
-    border-radius: 5px;
-    width: 100%;
-    text-align: center;
-    text-decoration: none;
-    font-weight: bolder;
-    padding: 7px 0px;
-    color: var(--link_color);
-}
-
-/*botoẽs*/
-section.botoes {
+main section.apresentacao div.container_botoes {
     width: 100%;
     display: flex;
-    margin-top: -5%;
     justify-content: space-evenly;
     align-items: center;
+    margin-top: -20px;
 }
 
-section.botoes button {
-    padding: 20px 50px;
+main section.apresentacao div.container_botoes .button {
+    padding: 15px 40px;
     border-radius: 10px;
-    border: none;
-    color: #fff;
+    text-decoration: none;
     font-weight: bolder;
-    cursor: pointer;
+    color: #fff;
     background-image: linear-gradient(to right, #250637, #6E0786, #DB00FF);
 }
 
-section.botoes button a {
+main section.apresentacao div.container_botoes .link_externo {
+    color: #000;
+    font-size: .9em;
+    font-weight: bolder;
     text-decoration: none;
-    color: #fff;
-}
-
-section.botoes a {
     display: flex;
     align-items: center;
-    text-decoration: underline;
-    color: #000;
+}
+/*config img e textos*/
+main section.apresentacao h1 {
+    width: 100%;
+    font-size: 4em;
+    font-family: var(--font-h1-h2-a);
+    font-weight: 900;
+    margin-bottom: 20px;
 }
 
-section.botoes a img {
-    width: 15px;
-    margin-left: 10px;
+main section.apresentacao h2 {
+    width: 100%;
+    font-size: 1em;
+    font-family: var(--font-h1-h2-a);
+    font-weight: 300;
+    margin-bottom: 10px;
 }
 
-/*contents*/
-#scribble {
-    margin:0px 0px 0px -100% ;
-    width: 50px;
+main section.apresentacao p {
+    font-size: .9em;
+    font-family: var(--font-p);
+    font-weight: 300;
+}
+
+main section.apresentacao .scribble {
+    width: 70px;
+    margin-left: -100%;
+    margin-top: -10px;
     transform: rotate(25deg);
 }
 
-
-/*imagem em mascara*/
-main div#simblo_audio {
-    width: max-content;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 25vh;
-    left: 51%;
-    z-index: 1;
-}
-
-main div#simblo_audio img {
-    width: 6vw;
-}
-
-main div#simblo_audio #headset_icon {
-    margin-left: 2vw;
-}
-
-main section#side_efect_image {
-    width: 55%;
-    height: 100vh;
-    background: url(../img/image_mask_crop.jpg) no-repeat center center;
-    background-size: cover;
-    clip-path: polygon(30% 0, 100% 0%, 100% 100%, 0% 100%);
+main section.apresentacao div.container_botoes img {
+    width: 15px;
+    margin-left: 10px;
 }
