@@ -1,3 +1,4 @@
+/*configurações gerais do site*/
 * {
     padding: 0px;
     margin: 0px;
@@ -6,6 +7,136 @@
 
 html, body {
     height: 100vh;
+}
+
+:root {
+    --font-h1-h2-a: 'Montserrat Alternates', sans-serif;
+    --font-p: 'Roboto', sans-serif;
+}
+
+/*menu de navegação*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    top: 50px;
+    left: 3vw;
+    position: absolute;
+}
+
+nav a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bolder;
+    border-radius: 10px;
+}
+
+nav a:hover {
+    background-color: #000;
+    color: #fff;
+    transition: .2s;
+}
+
+/*media queries menu de navegação*/
+@media screen and (max-width:1000px) {
+
+    nav {
+        display: none;
+    }
+
+    nav a {
+        font-size: 1.5em;
+        color: #fff;
+    }
+
+}
+
+/*Primeiro bloco do site*/
+main {
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 3vw;
+    background: url(../img/image_mask.png) no-repeat right fixed;
+    background-size: 100vh;
+}
+
+main section.apresentacao {
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*botões*/
+main section.apresentacao div.container_botoes {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: -20px;
+}
+
+main section.apresentacao div.container_botoes .button {
+    padding: 15px 40px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bolder;
+    color: #fff;
+    background-image: linear-gradient(to right, #250637, #6E0786, #DB00FF);
+}
+
+main section.apresentacao div.container_botoes .link_externo {
+    color: #000;
+    font-size: 1em;
+    font-weight: bolder;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+main section.apresentacao div.container_botoes .link_externo:hover {
+    text-decoration: underline;
+}
+
+/*@media queries main*/
+@media screen and (max-width:1000px) {
+    main {
+        width: 100%;
+        height: 100vh;
+        padding: 0;
+        margin-bottom: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #000 url(../img/image_mask_blur.jpg) no-repeat center fixed;
+        background-size: cover;
+    }
+
+    main section.apresentacao {
+        width: 80%;
+        color: #fff;
+    }
+    /*media queries botões*/
+    main section.apresentacao div.container_botoes {
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+    }
+    main section.apresentacao div.container_botoes a {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+    }
+
+    main section.apresentacao div.container_botoes .link_externo {
+        color: #fff;
+        margin-top: 15px;
+    }
 }
 
 /*config img e textos*/
@@ -46,9 +177,18 @@ main section.apresentacao div.container_botoes img {
     margin-left: 10px;
     transform: rotate(0deg);
 }
-/*config img e textos*/
 
-/*@media for img e textos*/
+section.container section.info div.numeros img {
+    width: 20px;
+}
+
+section.container section.info div.numeros div.star {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/*media queries for img e textos*/
 @media screen and (max-width:1000px) {
     main section.apresentacao h1 {
         font-size: 3.4em;
@@ -59,17 +199,53 @@ main section.apresentacao div.container_botoes img {
         position: absolute;
         bottom: 0;
         margin: 0px 0px 20px 0px;
-        
         transform: rotate(15deg) scale(.8);
     }
-
-:root {
-    --font-h1-h2-a: 'Montserrat Alternates', sans-serif;
-    --font-p: 'Roboto', sans-serif;
 }
 
 /*conteudo do site*/
 section.container {
     width: 100%;
-    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+section.container section.info {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+section.container section.info div {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section.container section.info span {
+    font-size: 1.5em;
+    font-family: var(--font-h1-h2-a);
+    font-weight: bolder;
+}
+
+/*media querie section info*/
+@media screen and (max-width:1000px) {
+    section.container {
+        flex-direction: column;
+    }
+
+    section.container section.title {
+        font-size: .7em;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    section.container section.info {
+        flex-direction: column;
+    }
 }
