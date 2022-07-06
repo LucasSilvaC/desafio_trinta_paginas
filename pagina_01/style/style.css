@@ -14,6 +14,10 @@ html, body {
     --font-p: 'Roboto', sans-serif;
 }
 
+.white_letter {
+    color: #fff;
+}
+
 /*menu de navegação*/
 nav {
     display: flex;
@@ -52,6 +56,14 @@ nav a:hover {
 }
 
 /*Primeiro bloco do site*/
+#retangulo {
+    width: 500px;
+    position: absolute;
+    z-index: -1;
+    top: 35vh;
+    transform: skewY(-5deg);
+    left: 0;
+}
 main {
     width: 100%;
     height: 100vh;
@@ -103,6 +115,9 @@ main section.apresentacao div.container_botoes .link_externo:hover {
 
 /*@media queries main*/
 @media screen and (max-width:1000px) {
+    #retangulo {
+        display: none;
+    }
     main {
         width: 100%;
         height: 100vh;
