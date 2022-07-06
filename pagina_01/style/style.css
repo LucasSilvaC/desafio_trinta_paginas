@@ -12,255 +12,179 @@ html, body {
 :root {
     --font-h1-h2-a: 'Montserrat Alternates', sans-serif;
     --font-p: 'Roboto', sans-serif;
+    --debug: 1px solid #000;
 }
 
-.white_letter {
-    color: #fff;
-}
-
-/*menu de navegação*/
-nav {
-    display: flex;
-    justify-content: space-between;
-    top: 50px;
-    left: 3vw;
-    position: absolute;
-}
-
-nav a {
-    padding: 10px 20px;
+/*estilizações globais*/
+a {
+    font-family: var(--font-h1-h2-a);
     text-decoration: none;
     color: #000;
-    font-weight: bolder;
-    border-radius: 10px;
 }
 
-nav a:hover {
-    background-color: #000;
-    color: #fff;
-    transition: .2s;
+h1, h2 {
+    font-family: var(--font-h1-h2-a);
 }
 
-/*media queries menu de navegação*/
-@media screen and (max-width:1000px) {
-
-    nav {
-        display: none;
-    }
-
-    nav a {
-        font-size: 1.5em;
-        color: #fff;
-    }
-
+p {
+    font-family: var(--font-p);
 }
 
-/*Primeiro bloco do site*/
-#retangulo {
-    width: 500px;
-    position: absolute;
-    z-index: -1;
-    top: 35vh;
-    transform: skewY(-5deg);
-    left: 0;
-}
+/*main*/
 main {
     width: 100%;
     height: 100vh;
-    margin-bottom: 50px;
+    padding: 0px 0px 7vw 15vh;
     display: flex;
-    align-items: center;
-    padding-left: 3vw;
+    flex-direction: column;
     background: url(../img/image_mask.png) no-repeat right fixed;
     background-size: 100vh;
 }
 
-main section.apresentacao {
-    width: 40vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/*botões*/
-main section.apresentacao div.container_botoes {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: -20px;
-}
-
-main section.apresentacao div.container_botoes .button {
-    padding: 15px 40px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bolder;
-    color: #fff;
-    background-image: linear-gradient(to right, #250637, #6E0786, #DB00FF);
-}
-
-main section.apresentacao div.container_botoes .link_externo {
-    color: #000;
-    font-size: 1em;
-    font-weight: bolder;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-}
-
-main section.apresentacao div.container_botoes .link_externo:hover {
-    text-decoration: underline;
-}
-
-/*@media queries main*/
+/*media querie main*/
 @media screen and (max-width:1000px) {
-    #retangulo {
-        display: none;
-    }
     main {
         width: 100%;
         height: 100vh;
-        padding: 0;
-        margin-bottom: 50px;
-        display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
-        background: #000 url(../img/image_mask_blur.jpg) no-repeat center fixed;
+        padding: 0px;
+        background: url(../img/image_mask.jpg) no-repeat center fixed;
         background-size: cover;
     }
-
-    main section.apresentacao {
-        width: 80%;
-        color: #fff;
-    }
-    /*media queries botões*/
-    main section.apresentacao div.container_botoes {
-        display: flex;
-        flex-direction: column;
-        margin-top: 15px;
-    }
-    main section.apresentacao div.container_botoes a {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-    }
-
-    main section.apresentacao div.container_botoes .link_externo {
-        color: #fff;
-        margin-top: 15px;
-    }
 }
 
-/*config img e textos*/
-main section.apresentacao h1 {
-    width: 100%;
-    font-size: 4em;
-    font-family: var(--font-h1-h2-a);
-    font-weight: 900;
-    margin-bottom: 20px;
-}
-
-main section.apresentacao h2 {
-    width: 100%;
-    font-size: 1em;
-    font-family: var(--font-h1-h2-a);
-    font-weight: 300;
-    margin-bottom: 10px;
-}
-
-main section.apresentacao p {
-    font-size: .9em;
-    font-family: var(--font-p);
-    font-weight: 300;
-}
-
-main section.apresentacao .scribble {
-    margin-left: -100%;
-    margin-top: -10px;
-}
-
-main section.apresentacao picture img {
-    width: 70px;
-    transform: rotate(35deg);
-}
-
-main section.apresentacao div.container_botoes img {
-    width: 15px;
-    margin-left: 10px;
-    transform: rotate(0deg);
-}
-
-section.container section.info div.numeros img {
-    width: 20px;
-}
-
-section.container section.info div.numeros div.star {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-/*media queries for img e textos*/
-@media screen and (max-width:1000px) {
-    main section.apresentacao h1 {
-        font-size: 3.4em;
-        text-align: center;
-    }
-
-    main section.apresentacao .scribble {
-        position: absolute;
-        bottom: 0;
-        margin: 0px 0px 20px 0px;
-        transform: rotate(15deg) scale(.8);
-    }
-}
-
-/*conteudo do site*/
-section.container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-
-section.container section.info {
-    width: 100%;
-    height: max-content;
+/*main > navegação*/
+main nav {
+    max-width: 50vw;
+    height: 35px;
+    margin-top: 30px;
     display: flex;
     justify-content: space-between;
-    padding: 0px 20px;
-}
-
-section.container section.info div {
-    width: 100%;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-section.container section.info span {
-    font-size: 1.5em;
-    font-family: var(--font-h1-h2-a);
     font-weight: bolder;
 }
 
-/*media querie section info*/
+main nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 0px 15px;
+}
+
+main nav a:hover {
+    border: 1px solid rgb(245, 0, 192);
+}
+/*media querie nav*/
 @media screen and (max-width:1000px) {
-    section.container {
-        flex-direction: column;
+    main nav {
+        display: none;
+    }
+}
+
+/*main > section*/
+main section.first_section {
+    width: 40vw;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+}
+
+main section.first_section h1 span.white_letter {
+    color: #fff;
+    padding: 0px 15px;
+    background: url(../img/forma_01.svg) no-repeat center;
+    box-shadow: 5px 5px 5px rgb(136, 136, 136);
+}
+
+main section.first_section picture#scribble img {
+    width: 60px;
+    margin: -40px 0px 0px 0px;
+    left: 50px;
+    transform: rotate(40deg);
+    position: absolute;
+}
+/*media querie main > section*/
+@media screen and (max-width:1000px) {
+    main section.first_section {
+        width: 90%;
+        justify-content: center;
     }
 
-    section.container section.title {
-        font-size: .7em;
-        margin-bottom: 10px;
-        text-align: center;
+    main section.first_section h1 span.white_letter {
+        width: 100%;
+        height: 80px;
+        font-size: 1.5em;
+        box-shadow: none;
     }
 
-    section.container section.info {
-        flex-direction: column;
+    main section.first_section picture#scribble img {
+        margin: 0px;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
     }
+}
+
+/*h1 h2 p*/
+main section.first_section h1 {
+    font-size: 4em;
+    margin-bottom: 10px;
+}
+
+main section.first_section h2 {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+main section.first_section p {
+    font-size: .9em;
+    margin-bottom: 20px;
+}
+/*media querie main > h1 h2 p*/
+@media screen and (max-width:1000px) {
+    main section.first_section h1, h2, p, a {
+        color: #fff;
+    }
+
+    main section.first_section h1 {
+        font-size: 2em;
+    }
+}
+
+/*botoes e links externos*/
+main section.first_section div.botoes {
+    display: flex;
+    align-items: center;
+}
+
+main section.first_section div.botoes a.button {
+    font-weight: bolder;
+    padding: 15px 30px;
+    margin-right: 20px;
+    background-image: linear-gradient(#250637, #6E0786, #DB00FF);
+    color: #fff;
+    border-radius: 10px;
+}
+
+main section.first_section div.botoes div.link_externo {
+    width: max-content;
+    display: flex;
+    align-items: center;
+}
+
+main section.first_section div.botoes div.link_externo a {
+    display: flex;
+    align-items: center;
+}
+
+main section.first_section div.botoes div.link_externo img {
+    width: 15px;
+    margin-left: 5px;
+}
+
+main section.first_section div.botoes div.link_externo a:hover {
+    text-decoration: underline;
 }
