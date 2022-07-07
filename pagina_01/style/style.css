@@ -82,11 +82,10 @@ main {
 /*main > navegação*/
 main nav {
     max-width: 50vw;
-    height: 35px;
+    height: 50px;
     margin-top: 30px;
     font-weight: bolder;
     display: flex;
-    justify-content: space-between;
 }
 
 main nav a {
