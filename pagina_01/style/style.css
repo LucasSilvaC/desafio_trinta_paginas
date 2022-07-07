@@ -15,13 +15,23 @@ html, body {
     --debug: 1px solid #000;
 }
 /*animações*/
-@keyframes exemplo {
+@keyframes span {
     from {
         max-width: 0px;
         padding: 0;
     }
     to {
         max-width: 100%;
+    }
+}
+
+@keyframes scribble {
+    from {
+        bottom: 15px;
+    }
+
+    to {
+        bottom: 50px;
     }
 }
 
@@ -108,22 +118,29 @@ main section.first_section h1 span.white_letter {
     background: url(../img/forma_01.svg) no-repeat center;
     background-size: cover;
     display: block;
-    animation-name: exemplo;
+    animation-name: span;
     animation-duration: 2s;
 }
 
 main section.first_section picture#scribble img {
     width: 60px;
-    margin: -40px 0px 0px 0px;
-    left: 50px;
-    transform: rotate(40deg);
-    position: absolute;
+    margin: -30px 0px 0px -48px;
+    transform: rotate(45deg);
+    animation: scribble;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
 }
+
 /*media querie main > section*/
 @media screen and (max-width:1000px) {
     main section.first_section {
+        height: 60vh;
         width: 90%;
-        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
     }
 
     main section.first_section h1 span.white_letter {
@@ -136,11 +153,8 @@ main section.first_section picture#scribble img {
     }
 
     main section.first_section picture#scribble img {
-        margin: 0px;
-        bottom: 20px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
+        position: absolute;
+        bottom: 15px;
     }
 }
 
@@ -158,7 +172,7 @@ main section.first_section h2 {
 main section.first_section p {
     font-size: .9em;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 /*media querie main > h1 h2 p*/
 @media screen and (max-width:1000px) {
@@ -175,13 +189,14 @@ main section.first_section p {
 main section.first_section div.botoes {
     display: flex;
     align-items: center;
+    margin-top: -20px;
 }
 
 main section.first_section div.botoes a.button {
     font-weight: bolder;
     padding: 15px 30px;
     margin-right: 20px;
-    background-image: linear-gradient(#250637, #6E0786, #DB00FF);
+    background-image: linear-gradient(to left, #250637, #6E0786, #DB00FF);
     color: #fff;
     border-radius: 10px;
 }
@@ -219,4 +234,10 @@ main section.first_section div.botoes div.link_externo a:hover {
         text-align: center;
         margin-bottom: 5px;
     }
+}
+
+/*section com conteudo*/
+section.container {
+    width: 100%;
+    height: 300px;
 }
