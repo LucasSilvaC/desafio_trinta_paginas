@@ -50,6 +50,11 @@ p {
     font-family: var(--font-p);
 }
 
+main section.first_section picture#scribble img{
+    width: 60px;
+    transform: rotate(45deg);
+}
+
 /*main*/
 main {
     width: 100%;
@@ -79,17 +84,17 @@ main nav {
     max-width: 50vw;
     height: 35px;
     margin-top: 30px;
+    font-weight: bolder;
     display: flex;
     justify-content: space-between;
-    font-weight: bolder;
 }
 
 main nav a {
+    padding: 0px 15px;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 5px;
-    padding: 0px 15px;
 }
 
 main nav a:hover {
@@ -106,41 +111,38 @@ main nav a:hover {
 main section.first_section {
     width: 40vw;
     height: max-content;
+    margin: auto 0;
     display: flex;
     flex-direction: column;
-    margin: auto 0;
 }
 
 main section.first_section h1 span.white_letter {
     max-width: 40vw;
-    color: #fff;
     padding: 0px 15px;
+    color: #fff;
+    display: block;
     background: url(../img/forma_01.svg) no-repeat center;
     background-size: cover;
-    display: block;
+    /*animação*/
     animation-name: span;
     animation-duration: 2s;
 }
 
-main section.first_section picture#scribble img {
-    width: 60px;
-    margin: -30px 0px 0px -48px;
-    transform: rotate(45deg);
-    animation: scribble;
-    animation-iteration-count: infinite;
-    animation-duration: 1s;
+main section.first_section picture#scribble {
+    width: max-content;
+    margin-left: -50px;
+    margin-top: -30px;
 }
-
 /*media querie main > section*/
 @media screen and (max-width:1000px) {
     main section.first_section {
-        height: 60vh;
         width: 90%;
+        height: 60vh;
+        padding: 0;
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: space-between;
-        padding: 0;
+        align-items: center;
     }
 
     main section.first_section h1 span.white_letter {
@@ -152,9 +154,18 @@ main section.first_section picture#scribble img {
         animation: none;
     }
 
-    main section.first_section picture#scribble img {
+    main section.first_section picture#scribble {
+        width: 100%;
+        padding-left: 30px;
+        bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: absolute;
-        bottom: 15px;
+        /*animação*/
+        animation: scribble;
+        animation-iteration-count: infinite;
+        animation-duration: 1s;
     }
 }
 
@@ -170,9 +181,9 @@ main section.first_section h2 {
 }
 
 main section.first_section p {
+    margin-bottom: 10px;
     font-size: .9em;
     font-weight: bold;
-    margin-bottom: 10px;
 }
 /*media querie main > h1 h2 p*/
 @media screen and (max-width:1000px) {
@@ -187,18 +198,18 @@ main section.first_section p {
 
 /*botoes e links externos*/
 main section.first_section div.botoes {
+    margin-top: -20px;
     display: flex;
     align-items: center;
-    margin-top: -20px;
 }
 
 main section.first_section div.botoes a.button {
-    font-weight: bolder;
     padding: 15px 30px;
     margin-right: 20px;
+    border-radius: 10px;
+    font-weight: bolder;
     background-image: linear-gradient(to left, #250637, #6E0786, #DB00FF);
     color: #fff;
-    border-radius: 10px;
 }
 
 main section.first_section div.botoes div.link_externo {
@@ -231,8 +242,8 @@ main section.first_section div.botoes div.link_externo a:hover {
 
     main section.first_section div.botoes a.button {
         width: 100%;
-        text-align: center;
         margin-bottom: 5px;
+        text-align: center;
     }
 }
 
