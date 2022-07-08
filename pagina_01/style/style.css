@@ -17,8 +17,8 @@ html, body {
 /*animações*/
 @keyframes span {
     from {
-        max-height: 0px;
         max-width: 0px;
+        max-height: 0px;
         padding: 0px;
     }
     to {
@@ -119,7 +119,7 @@ main section.first_section {
 
 main section.first_section h1 span.white_letter {
     max-width: 40vw;
-    padding: 0px 15px;
+    padding-left: 20px;
     color: #fff;
     display: block;
     background: url(../img/forma_01.svg) no-repeat center;
