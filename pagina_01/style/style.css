@@ -165,8 +165,8 @@ main section.first_section picture#scribble {
         position: absolute;
         /*animação*/
         animation: scribble;
-        animation-iteration-count: infinite;
         animation-duration: 1s;
+        animation-iteration-count: infinite;
     }
 }
 
@@ -324,7 +324,6 @@ section.container div.content_class div.classificacao h2 {
 /*div.content_plataformas*/
 section.container div.content_plataformas {
     width: 100%;
-    height: 400px;
     padding-bottom: 60px;
     display: flex;
     flex-direction: column;
@@ -341,6 +340,7 @@ section.container div.content_plataformas div.title_plataformas {
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
+    margin-bottom: 30px;
     color: #fff;
 }
 
@@ -353,16 +353,55 @@ section.container div.content_plataformas h2 {
     font-weight: lighter;
 }
 
-section.container div.plataformas {
-    width: 80%;
-    margin: 0 auto;
-}
-
-section.container div.plataformas div.nomes_plataformas {
+section.container div.plataformas div.nomes_plataformas{
     display: flex;
     justify-content: space-between;
     font-size: 2em;
     font-weight: bolder;
     margin-top: 15px;
     font-family: var(--font-h1-h2-a);
+}
+
+section.container div.plataformas {
+    width: 80%;
+    margin: 0 auto;
+}
+
+section.container div.plataformas div.nomes_plataformas a {
+    color: #fff;
+}
+
+section.container div.plataformas div.nomes_plataformas a:hover {
+    text-decoration: underline;
+}
+/*media querie section.plataformas*/
+@media screen and (max-width:1000px) {
+    section.container div.content_plataformas {
+        flex-direction: column;
+    }
+    
+    section.container div.content_plataformas div.title_plataformas {
+        width: 100%;
+        text-align: center;
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    section.container div.content_plataformas h2 {
+        font-size: .8em;
+    }
+
+    section.container div.content_plataformas div.plataformas {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    section.container div.content_plataformas div.plataformas div.nomes_plataformas {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    section.container div.content_plataformas div.plataformas div.nomes_plataformas a {
+        margin: 5px 0px;
+    }
 }
