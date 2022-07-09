@@ -251,32 +251,32 @@ main section.first_section div.botoes div.link_externo a:hover {
 /*section com conteudo*/
 section.container {
     width: 100%;
-    height: 300px;
+    min-height: 100px;
 }
-
-section.container div.content {
+/*div.content_class*/
+section.container div.content_class {
     width: 80%;
-    height: 150px;
-    padding-top: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-section.container div.content h1 {
+section.container div.content_class h1 {
     width: 70%;
     font-size: 1em;
 }
 
-section.container div.content div.classificacao {
+section.container div.content_class div.classificacao {
     height: 100%;
     width: 95%;
     display: flex;
     justify-content: space-between;
 }
 
-section.container div.content div.classificacao div.bloco_classificacao {
+section.container div.content_class div.classificacao div.bloco_classificacao {
     width: 100%;
     height: 100%;
     display: flex;
@@ -286,16 +286,83 @@ section.container div.content div.classificacao div.bloco_classificacao {
     text-align: center;
 }
 
-section.container div.content div.classificacao div.bloco_classificacao div.estrelas img {
+section.container div.content_class div.classificacao div.bloco_classificacao div.estrelas img {
     width: 15px;
 }
 
-section.container div.content div.classificacao h1 {
+section.container div.content_class div.classificacao h1 {
     font-size: 2em;
     font-weight: bolder;
 }
 
-section.container div.content div.classificacao h2 {
+section.container div.content_class div.classificacao h2 {
     font-size: .9em;
     font-weight: 400;
+    color: #000;
+}
+/*media querie content_class*/
+@media screen and (max-width:1000px) {
+    section.container div.content_class {
+        flex-direction: column;
+    }
+
+    section.container div.content_class h1.title {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    section.container div.content_class div.classificacao {
+        flex-direction: column;
+    }
+
+    section.container div.content_class div.classificacao div.bloco_classificacao {
+        margin-bottom: 15px;
+    }
+}
+
+/*div.content_plataformas*/
+section.container div.content_plataformas {
+    width: 100%;
+    height: 400px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+    background-color: #3C3746;
+}
+
+section.container div.content_plataformas div.title_plataformas {
+    width: 80%;
+    padding-top: 50px;
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    color: #fff;
+}
+
+section.container div.content_plataformas div.title_plataformas h1 {
+    font-size: 3em;
+}
+
+section.container div.content_plataformas h2 {
+    font-size: .5em;
+    font-weight: lighter;
+}
+
+section.container div.plataformas {
+    width: 80%;
+    margin: 0 auto;
+}
+
+section.container div.plataformas div.nomes_plataformas {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2em;
+    font-weight: bolder;
+    margin-top: 15px;
+    font-family: var(--font-h1-h2-a);
 }
