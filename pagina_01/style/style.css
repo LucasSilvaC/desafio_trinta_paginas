@@ -324,10 +324,10 @@ section.container div.content_class div.classificacao h2 {
 /*div.content_plataformas*/
 section.container div.content_plataformas {
     width: 100%;
-    padding-bottom: 60px;
+    height: 500px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     color: #fff;
     background-color: #3C3746;
 }
@@ -404,4 +404,12 @@ section.container div.plataformas div.nomes_plataformas a:hover {
     section.container div.content_plataformas div.plataformas div.nomes_plataformas a {
         margin: 5px 0px;
     }
+}
+
+/*section.episodios*/
+section.container div.episodios {
+    width: 100%;
+    height: 400px;
+    color: #fff;
+    background-color: #000;
 }
