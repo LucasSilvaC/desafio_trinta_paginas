@@ -171,6 +171,10 @@ main section.first_section picture#scribble {
 }
 
 /*h1 h2 p*/
+main section.first_section {
+    cursor: default;
+}
+
 main section.first_section h1 {
     font-size: 4em;
     margin-bottom: 10px;
