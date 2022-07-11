@@ -529,7 +529,7 @@ section.container div.redes_sociais div.seta_animada .arrow_02 {
 }
 
 section.container div.redes_sociais div.seta_animada img {
-    max-width: 200px;
+    width: 200px;
 }
 /*media querie div.redes_sociais*/
 @media screen and (max-width:1024px) {
@@ -538,10 +538,16 @@ section.container div.redes_sociais div.seta_animada img {
         justify-content: space-around;
         flex-direction: column;
         padding: 0;
+        background-position: right center;
     }
 
     section.container div.redes_sociais h1 {
         margin: 0 auto;
-        font-size: 1em;
+        width: 100%;
+        font-size: .7em;
+    }
+
+    section.container div.redes_sociais img {
+        width: 100px;
     }
 }
