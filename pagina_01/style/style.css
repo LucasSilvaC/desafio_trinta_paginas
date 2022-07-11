@@ -263,7 +263,7 @@ section.container {
 }
 /*div.content_class*/
 section.container div.content_class {
-    width: 80%;
+    max-width: 1300px;
     padding-top: 30px;
     padding-bottom: 30px;
     margin: 0 auto;
@@ -342,7 +342,6 @@ section.container div.content_plataformas {
 
 section.container div.content_plataformas div.title_plataformas {
     width: 80%;
-    padding-top: 50px;
     height: max-content;
     display: flex;
     justify-content: space-between;
@@ -514,7 +513,7 @@ section.container div.redes_sociais div.seta_animada {
 
 section.container div.redes_sociais div.seta_animada .arrow_01 {
     margin-right: -170px;
-    opacity: .8;
+    opacity: .2;
     animation-name: fade;
     animation-duration: 1s;
     animation-iteration-count: infinite;
@@ -522,7 +521,7 @@ section.container div.redes_sociais div.seta_animada .arrow_01 {
 
 section.container div.redes_sociais div.seta_animada .arrow_02 {
     margin-right: -170px;
-    opacity: .8;
+    opacity: .5;
     animation-name: fade;
     animation-duration: 1s;
     animation-iteration-count: infinite;
