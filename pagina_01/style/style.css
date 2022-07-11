@@ -417,8 +417,8 @@ section.container div.plataformas div.nomes_plataformas a:hover {
 /*section.missao*/
 section.container div.missao {
     width: 100%;
-    min-height: 500px;
-    padding-top: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     text-align: center;
     color: #fff;
     background-color: #1E1B1E;
@@ -426,7 +426,7 @@ section.container div.missao {
 
 section.container div.missao div.conceitos {
     min-height: max-content;
-    margin: 50px auto;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -504,7 +504,7 @@ section.container div.redes_sociais {
 }
 
 section.container div.redes_sociais h1 {
-    width: 55vw;
+    width: max-content;
 }
 
 section.container div.redes_sociais div.seta_animada {
@@ -530,4 +530,18 @@ section.container div.redes_sociais div.seta_animada .arrow_02 {
 
 section.container div.redes_sociais div.seta_animada img {
     max-width: 200px;
+}
+/*media querie div.redes_sociais*/
+@media screen and (max-width:1024px) {
+    section.container div.redes_sociais {
+        text-align: center;
+        justify-content: space-around;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    section.container div.redes_sociais h1 {
+        margin: 0 auto;
+        font-size: 1em;
+    }
 }
