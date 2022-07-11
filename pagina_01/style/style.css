@@ -35,18 +35,15 @@ html, body {
     }
 }
 
-@keyframes fade_in {
+@keyframes fade {
     from {
-        width: 0px;
-        font-size: 0px;
+        margin-right: -200px;
     }
 
     to {
-        width: 100%;
-        font-size: 100%;
+        margin-right: -170px;
     }
 }
-
 /*estilizações globais*/
 a {
     font-family: var(--font-h1-h2-a);
@@ -490,4 +487,47 @@ section.container div.missao div.conceitos div.conteudo_conceito p {
         font-size: .9em;
         font-weight: lighter;
     }
+}
+
+/*section.cotainer div.redes_sociais*/
+section.container div.redes_sociais {
+    width: 100%;
+    height: 500px;
+    padding-right: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-size: 3.5em;
+    background: url(../img/bg.png) no-repeat top center fixed;
+    background-size: cover;
+}
+
+section.container div.redes_sociais h1 {
+    width: 55vw;
+}
+
+section.container div.redes_sociais div.seta_animada {
+    display: flex;
+    justify-content: space-between;
+}
+
+section.container div.redes_sociais div.seta_animada .arrow_01 {
+    margin-right: -170px;
+    opacity: .8;
+    animation-name: fade;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+} 
+
+section.container div.redes_sociais div.seta_animada .arrow_02 {
+    margin-right: -170px;
+    opacity: .8;
+    animation-name: fade;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+section.container div.redes_sociais div.seta_animada img {
+    max-width: 200px;
 }
