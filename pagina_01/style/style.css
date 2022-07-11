@@ -35,6 +35,18 @@ html, body {
     }
 }
 
+@keyframes fade_in {
+    from {
+        width: 0px;
+        font-size: 0px;
+    }
+
+    to {
+        width: 100%;
+        font-size: 100%;
+    }
+}
+
 /*estilizações globais*/
 a {
     font-family: var(--font-h1-h2-a);
@@ -48,6 +60,7 @@ h1, h2 {
 
 p {
     font-family: var(--font-p);
+    font-weight: bold;
 }
 
 main section.first_section picture#scribble img{
@@ -404,10 +417,77 @@ section.container div.plataformas div.nomes_plataformas a:hover {
     }
 }
 
-/*section.episodios*/
-section.container div.episodios {
+/*section.missao*/
+section.container div.missao {
     width: 100%;
-    height: 400px;
+    min-height: 500px;
+    padding-top: 40px;
+    text-align: center;
     color: #fff;
-    background-color: #000;
+    background-color: #1E1B1E;
+}
+
+section.container div.missao div.conceitos {
+    min-height: max-content;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section.container div.missao div.thumb {
+    width: 50px;
+    height: 50px;
+    border-radius: 20%;
+    background-color: #3C3746;
+}
+
+section.container div.missao h1 {
+    font-size: 3em;
+}
+
+section.container div.missao h2 {
+    margin-top: 15px;
+    font-size: .9em;
+    font-weight: lighter;
+}
+
+section.container div.missao div.conceitos div.conteudo_conceito {
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+    margin: 5px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 10%;
+    background-color: #2E292E;
+}
+
+section.container div.missao div.conceitos div.conteudo_conceito h1 {
+    font-size: 1em;
+}
+
+
+section.container div.missao div.conceitos div.conteudo_conceito p {
+    text-align: left;
+    font-size: .8em;
+}
+/*media querie div.missão*/
+@media screen and (max-width:770px) {
+    section.container div.missao div.conceitos div.conteudo_conceito {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    section.container div.missao > h1 {
+        font-size: 2em;
+    }
+
+    section.container div.missao > h2 {
+        font-size: .9em;
+        font-weight: lighter;
+    }
 }
